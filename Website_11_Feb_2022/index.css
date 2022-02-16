@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Zen+Kaku+Gothic+Antique&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+/* navbar */
+
+.navbar-brand {
+  font-size: 2rem !important;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.navbar-bg {
+  background-color: #0087b4;
+}
+
+.nav-link {
+  font-size: 0.9rem !important;
+  margin: 0px 13px;
+  color: white !important;
+  font-weight: 500;
+  box-sizing: border-box !important;
+}
+
+.nav-link:hover {
+  color: tomato !important;
+  border-bottom: 2px solid tomato;
+}
+
+/* header */
+
+.header-container {
+  background-color: #0087b4;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+  letter-spacing: 1px;
+  transition: All 0.3s linear !important;
+}
+
+.header-h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+.header-btn {
+  background-color: tomato !important;
+}
+
+.header-btn:hover {
+  background-color: white !important;
+  color: tomato !important;
+}
+
+@media screen and (max-width: 1472px) {
+  .header-h1 {
+    font-size: 3rem;
+  }
+
+  .header-img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-h1 {
+    font-size: 2rem;
+  }
+
+  .header-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* about */
+
+.about-img {
+  width: 500px;
+  height: 500px;
+}
+
+.about-h1 {
+  font-size: 2rem;
+}
+
+.about-p {
+  font-size: 1.1rem !important;
+}
+
+.about-btn {
+  background-color: #0087b4 !important;
+}
+
+.about-btn:hover {
+  background-color: tomato !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-p {
+    font-size: 1rem;
+  }
+
+  .about-img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* service */
+.service-container {
+  background-color: #0087b4;
+}
+
+.service-img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+}
+
+.service-btn {
+  background-color: #0087b4 !important;
+}
+
+.service-btn:hover {
+  background-color: tomato !important;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -1px #f2f2f2;
+}
+
+/* Frequently asked question */
+
+.accordion-bg {
+  background-color: #f2f2f2 !important;
+}
+.accordion-bg2 {
+  background-color: #e4e4e4 !important;
+  color: #0087b4 !important;
+  font-size: 1.3rem !important;
+  outline: none !important;
+}
+
+.accordion-button {
+  outline: none !important;
+}
+
+/* contact us */
+
+.contact-container {
+  background-color: #0087b4;
+}
+
+.submit-btn {
+  background-color: white !important;
+}
+
+.submit-btn:hover {
+  color: white !important;
+  background-color: tomato !important;
+}
+
+/* footer */
+
+.footer-icon {
+  font-size: 1.5rem;
+  color: #0087b4;
+}
+
+.footer-icon:hover {
+  color: tomato;
+}

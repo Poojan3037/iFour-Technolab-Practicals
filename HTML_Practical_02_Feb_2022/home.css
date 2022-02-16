@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap");
+
+body {
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+}
+
+:root {
+  --primary: rgb(226, 247, 255);
+  --secondary: rgb(1, 36, 49);
+  --hover: grey;
+  --background: #f2f2f2;
+  --btn: skyblue;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary);
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+}
+
+li > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--hover);
+  font-weight: bold;
+}
+
+li > a:hover {
+  color: var(--secondary);
+}
+
+/* intro */
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.intro-left {
+  width: 50%;
+}
+
+.intro-right > h2 {
+  text-align: center;
+}
+
+.technologies-container > img {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  box-shadow: 0px 0px 15px 0px var(--hover);
+}
+
+/* services */
+
+.industry-container {
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.industry-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.industry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+i:hover {
+  color: var(--btn);
+  cursor: pointer;
+}
+
+/* map */
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  padding: 20px;
+}
+
+.map {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 15px 0px var(--hover);
+  padding: 20px;
+}
+
+.map > h1 {
+  font-weight: bold;
+}
+
+/* footer */
+.footer-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+  padding: 20px;
+}
+
+.ifour-footer-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.footer-social {
+  padding: 20px;
+}
+
+.footer-social > i {
+  color: white;
+  margin: 0px 10px;
+}
+
+.footer-social > i:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.footer-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+/*--- Responsive Design For Mobile --- */
+@media screen and (max-width: 767px) and (min-width: 400px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  /* navbar */
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #logo {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  li > a {
+    font-size: 15px;
+  }
+
+  /* intro */
+
+  main {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .intro-left {
+    width: 80%;
+  }
+
+  .technologies-container {
+    display: flex;
+  }
+
+  .technologies-container > img {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+  }
+
+  /* services */
+
+  .industry-container {
+    padding: 10px;
+  }
+
+  .service-icon {
+    font-size: 20px !important;
+  }
+
+  /* map */
+
+  .map {
+    width: 90%;
+  }
+
+  /* footer */
+
+  .ifour-footer-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/*--- Responsive Design For Tablet --- */
+
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  main {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .intro-left {
+    width: 70%;
+  }
+
+  .map {
+    width: 70%;
+  }
+}
+
+/* ---Responsive Design For very small Device---- */
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  /* navbar */
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #logo {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  li > a {
+    font-size: 13px;
+  }
+
+  /* intro */
+
+  main {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .intro-left {
+    width: 80%;
+  }
+
+  .technologies-container {
+    display: flex;
+  }
+
+  .technologies-container > img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+
+  /* services */
+
+  .industry-container {
+    padding: 10px;
+  }
+
+  .service-icon {
+    font-size: 13px !important;
+  }
+
+  /* map */
+
+  .map {
+    width: 90%;
+  }
+
+  /* footer */
+
+  .ifour-footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+}

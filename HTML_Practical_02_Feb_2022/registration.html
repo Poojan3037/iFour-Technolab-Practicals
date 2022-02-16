@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body >
+
+    <!-- back button -->
+
+    <div class="back-btn">
+            <h1> <a href="home.html"><</a></h1>
+    </div>
+
+    <!-- navbar -->
+
+    <nav>
+        <div>
+            <span style="margin-left:20px ;">
+                <img id="logo" src="ifour-logo.png" alt="ifour-logo"/>
+            </span>
+            <h4 class="title">ifour Technolab</h4>
+        </div>
+        <div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="registration.html" style="color:rgb(1, 36, 49); border-bottom: 2px solid;">Registration Form</a></li>
+                <li><a href="table.html">Show User Data</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- header part -->
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+
+    <hr/>
+
+
+    <!-- form -->
+
+    <main>
+        <form  onsubmit="event.preventDefault();formSubmit()">
+            <div>
+                <label for="fname">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Name" required>
+            </div>
+            <br/>
+            <div>
+                <label for="email"> Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter Email" required>
+            </div>
+            <br/>
+            <div>
+                <label for="dob"> Date Of Birth</label>
+            <input type="date" name="dob" id="dob" placeholder="Enter Date of Birth" required>
+            </div>
+            <br/>
+            <div>
+                <label for="address">Address</label>
+                <textarea cols="30" rows="3" name="address" id="address" placeholder="Enter Address"></textarea>
+            </div>
+            <br/>
+            <div>
+                <label>Occupation</label>
+                <select id="occupation" >
+                    <option value="Student">Student</option>
+                    <option value="Employee">Employee</option>
+                </select>
+            </div>
+            <br/>
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" checked >
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+            </div>
+            <br/>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <br/>
+            <div class="btn-div">
+                <input type="submit" value="Submit">
+            </div>
+          </form>
+    </main>
+
+
+    <hr/>
+  
+    <!-- footer -->
+
+    <footer>
+        <div class="footer-up">
+         <img class="ifour-footer-logo" src="ifour-logo.png" alt="ifour-footer-logo"/>
+         <div class="footer-social">
+             <i class="fa fa-facebook-square" style="font-size:25px"></i>
+             <i class="fa fa-instagram" style="font-size:25px"></i>
+             <i class="fa fa-twitter-square" style="font-size:25px"></i>
+             <i class="fa fa-linkedin-square" style="font-size:25px"></i>
+         </div>
+        </div>
+        <div class="footer-down">
+        <p style="color: white;">
+        <b>
+         Copyright  2021 <span style="color: red;">iFour Technolab Pvt. Ltd.</span> all the rights reserved.
+        </b> 
+        </p>
+     </div>
+    </footer>
+
+
+    <script src="registration.js"></script>
+</body>
+</html>

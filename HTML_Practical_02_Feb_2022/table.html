@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body onload="loadData()">
+
+    <!-- back button -->
+
+    <div class="back-btn">
+      <h1> <a href="home.html"><</a></h1>
+</div>
+
+    
+<!-- table -->
+    <div class="table-heading">
+        <h1>LocalStorage Data</h1>
+        <div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="registration.html">Registration Form</a></li>
+                <li><a href="table.html" style="color:rgb(1, 36, 49); border-bottom: 2px solid;">Show User Data</a></li>
+            </ul> 
+        </div>
+    </div>
+    
+    <div style="overflow-x: auto;">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>DOB</th>
+          <th>Address</th>
+          <th>Occupation</th>
+          <th>Gender</th>
+        </tr>
+        <tr>
+          <td>Poojan</td>
+          <td>Poojan@gmail.com</td>
+          <td>123</td>
+          <td>2022-02-2</td>
+          <td>Vadoaara</td>
+          <td>Student</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Smit</td>
+          <td>smit@gmail.com</td>
+          <td>123</td>
+          <td>2022-02-2</td>
+          <td>Vadoaara</td>
+          <td>Student</td>
+          <td>Male</td>
+        </tr>
+       
+        <tbody id="table">
+          
+        </tbody>
+      </table>
+    </div>
+      
+
+
+          <!-- javascript for set data in table -->
+    <script>
+
+let table = document.getElementById("table");
+let usersList = JSON.parse(localStorage.getItem("user"));
+
+        function loadData() {
+  if (usersList) {
+    let html = ``;
+    usersList.map((item) => {
+      html =
+        html +
+        `
+        <tr>
+            <td>${item.name}</td>
+            <td>${item.email}</td>
+            <td>${item.password}</td>
+            <td>${item.dob}</td>
+            <td>${item.address}</td>
+            <td>${item.occupation}</td>
+            <td>${item.gender}</td>
+        </tr>
+        `;
+    });
+    table.innerHTML = html;
+  } else {
+    console.log("Empty");
+    usersList = [];
+  }
+}
+
+    </script>
+</body>
+</html>

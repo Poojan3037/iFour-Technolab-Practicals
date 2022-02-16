@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap");
+
+body {
+  /* background image */
+
+  background-image: url("download.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(49, 49, 49);
+  position: sticky;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header > a {
+  cursor: pointer;
+  text-decoration: none;
+  color: tomato !important;
+  margin: 10px;
+}
+
+/* css selector exercise */
+
+div {
+  border: 1px solid;
+  padding: 50px;
+  margin: 30px;
+  width: 90%;
+}
+
+h1 {
+  color: red;
+}
+
+div > p {
+  color: green;
+}
+
+#id-selector {
+  color: brown;
+}
+
+.class-selector {
+  color: coral;
+}
+
+h4,
+h5,
+h6 {
+  color: darkmagenta;
+}
+
+input[type="text"] {
+  width: 400px;
+}
+
+#div1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Pseudo-classes  */
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
+}
+
+a:visited {
+  color: black;
+}
+
+.btn {
+  height: 30px;
+  background-color: red;
+  color: white;
+  width: 100px;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: tomato;
+  cursor: pointer;
+}
+
+/* Pseudo-Element */
+
+.pseudo-elements-1::before {
+  content: "hello ";
+}
+
+.pseudo-elements-2::after {
+  content: " Poojan";
+}
+
+/* Background / Width / Height */
+
+.bg {
+  border: 5px dotted black;
+  background-color: darkgray;
+  max-height: 400px;
+  max-width: 400px;
+  margin: 10px;
+}
+
+/* Margin /Padding / outline */
+
+.mpo > div {
+  border: 3px solid red;
+  border-radius: 10px;
+  outline: 4px solid blueviolet;
+  padding: 10px 5px;
+  margin: 20px 10px;
+}
+
+/* Text */
+
+.text {
+  margin: 20px;
+}
+
+/* Text align */
+
+.text > .ta-1 {
+  text-align: center;
+}
+
+.text > .ta-2 {
+  text-align: end;
+}
+
+.text > .ta-3 {
+  text-align: justify;
+}
+
+/* Text-Decoration */
+
+.td-1 {
+  text-decoration: underline 1px solid;
+}
+
+.td-2 {
+  text-decoration: overline 1px solid;
+}
+
+.td-3 {
+  text-decoration: line-through 1px solid;
+}
+
+/* Text-Transform */
+
+.tt-1 {
+  text-transform: capitalize;
+}
+
+.tt-2 {
+  text-transform: lowercase;
+}
+
+.tt-3 {
+  text-transform: uppercase;
+}
+
+/* Text-Spacing */
+
+.ts-1 {
+  letter-spacing: 5px;
+}
+
+.ts-1 {
+  word-spacing: 5px;
+}
+
+.ts-3 {
+  line-height: 10px;
+}
+
+/* Task Indent */
+
+.ti-1 {
+  text-indent: 50px;
+}
+
+/* Fonts */
+
+.fonts > h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-style: oblique;
+  font-size: 30px;
+  font-variant: small-caps;
+}
+
+/* List */
+
+ul {
+  list-style: square;
+  background-color: grey;
+  list-style-position: inside;
+}
+
+ol {
+  list-style: lower-roman;
+  background-color: grey;
+  list-style-position: outside;
+}
+
+li {
+  background-color: hotpink;
+  padding: 10px 20px;
+}
+
+/* Float */
+
+.float-left-img {
+  float: left;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+}

@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap");
+
+body {
+  /* background image */
+
+  background-image: url("download.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(49, 49, 49);
+  position: sticky;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header > a {
+  cursor: pointer;
+  text-decoration: none;
+  color: tomato !important;
+  margin: 10px;
+}
+
+h1 {
+  color: red;
+}
+
+div {
+  width: 90%;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid;
+}
+
+/* Transform */
+
+h2 {
+  color: white;
+}
+
+.transform-1,
+.transform-2,
+.transform-3,
+.transform-4 {
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+  display: inline-block;
+}
+
+.transform-1:hover {
+  transform: rotate(20deg);
+}
+
+.transform-2:hover {
+  transform: translate(50px, 50px);
+}
+
+.transform-3:hover {
+  transform: skewY(20deg);
+}
+
+.transform-4:hover {
+  transform: rotateX(180deg);
+}
+
+/* Gradiant */
+
+.gradiant-bg {
+  width: 300px;
+  height: 300px;
+  background-image: linear-gradient(to bottom left, blue, lightblue, skyblue);
+}
+
+/* Box Shadow */
+
+.box-shadow {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 10px 10px 10px 0px black;
+}
+
+/* Border Radius */
+
+.border-radius {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+/* Border Image */
+
+.border-img {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(141, 141, 141);
+  border: 30px solid transparent;
+  border-image: url("border.png") 100 stretch;
+}
+
+/* Opacity & Position */
+
+.bg {
+  width: 500px;
+  height: 500px;
+  border: 1px solid;
+  position: relative;
+  border: none !important;
+}
+
+.bg-pic {
+  background-image: url("animal.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  opacity: 0.7;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+}
+
+.bg > h1 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}

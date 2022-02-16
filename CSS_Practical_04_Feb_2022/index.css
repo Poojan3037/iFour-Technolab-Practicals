@@ -1,0 +1,12 @@
+.div1 {
+  border: 1px solid;
+}
+
+.colDiv {
+  border: 1px solid red;
+  height: 100px;
+}
+
+.navbarColor {
+  background-color: blueviolet !important;
+}

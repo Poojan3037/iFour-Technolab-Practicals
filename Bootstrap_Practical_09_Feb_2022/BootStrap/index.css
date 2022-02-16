@@ -1,0 +1,38 @@
+.nav-zIndex {
+  z-index: 1;
+}
+
+.header-row {
+  height: 400px;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) {
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  .logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+  }
+
+  .img {
+    width: 130px;
+    height: 130px;
+  }
+}

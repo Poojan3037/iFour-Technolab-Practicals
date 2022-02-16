@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap");
+
+body {
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+}
+
+:root {
+  --primary: rgb(226, 247, 255);
+  --secondary: rgb(1, 36, 49);
+  --hover: grey;
+  --background: #f2f2f2;
+  --skyblue: skyblue;
+}
+
+/* back btn */
+
+.back-btn {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  background-color: black;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.back-btn > h1 {
+  margin: 0px;
+}
+
+.back-btn > h1 > a {
+  text-decoration: none;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: var(--hover);
+}
+
+/* navbar */
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+li > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--hover);
+  font-weight: bold;
+}
+
+li > a:hover {
+  color: var(--secondary);
+}
+
+/* table */
+
+.table-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  margin: 10px 0px;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin: 0px 0px 0px 10px;
+}
+
+th {
+  border: 1px solid var(--secondary);
+  text-align: center;
+  background-color: var(--skyblue);
+}
+
+td {
+  border: 1px solid var(--secondary);
+  text-align: center;
+  background-color: var(--primary);
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  li > a {
+    font-size: 15px;
+  }
+
+  table {
+    overflow-x: auto;
+  }
+}

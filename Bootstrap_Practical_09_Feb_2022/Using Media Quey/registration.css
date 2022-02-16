@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap");
+
+body {
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+}
+
+:root {
+  --primary: rgb(226, 247, 255);
+  --secondary: rgb(1, 36, 49);
+  --hover: grey;
+  --background: #f2f2f2;
+  --btn: skyblue;
+}
+
+/* back btn */
+
+.back-btn {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  background-color: black;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.back-btn > h1 {
+  margin: 0px;
+}
+
+.back-btn > h1 > a {
+  text-decoration: none;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: var(--hover);
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary);
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+}
+
+li > a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--hover);
+  font-weight: bold;
+}
+
+li > a:hover {
+  color: var(--secondary);
+}
+
+/* header part */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+/* form */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  padding: 20px;
+}
+
+form {
+  width: 40%;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea {
+  border: none;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+select,
+input {
+  border: none;
+  height: 25px;
+  width: 300px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-div > input {
+  margin: 0;
+  background-color: var(--btn);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+}
+
+.btn-div > input:hover {
+  background-color: var(--background);
+  border: 3px solid var(--secondary);
+}
+
+/* footer */
+.footer-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+  padding: 20px;
+}
+
+.ifour-footer-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.footer-social {
+  padding: 20px;
+}
+
+.footer-social > i {
+  color: white;
+  margin: 0px 10px;
+}
+
+.footer-social > i:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.footer-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+/*--- Responsive Design For Mobile --- */
+@media screen and (max-width: 767px) and (min-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  /* navbar */
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #logo {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  li > a {
+    font-size: 15px;
+  }
+
+  /* form */
+
+  form {
+    width: 80%;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  select,
+  input {
+    height: 30px;
+    width: 290px;
+    font-size: 13px;
+    margin-left: 5px;
+  }
+
+  .btn-div > input {
+    height: 30px;
+    width: 100px;
+  }
+
+  /* footer */
+
+  .ifour-footer-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/*--- Responsive Design For Tablet --- */
+
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  /* form */
+
+  form {
+    width: 60%;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  select,
+  input {
+    height: 30px;
+    width: 290px;
+    font-size: 13px;
+    margin-left: 5px;
+  }
+
+  .btn-div > input {
+    height: 30px;
+    width: 100px;
+  }
+
+  /* footer */
+
+  .ifour-footer-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* ---Responsive Design For very small Device---- */
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  /* navbar */
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #logo {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  li > a {
+    font-size: 13px;
+  }
+
+  /* form */
+
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  select,
+  input {
+    height: 25px;
+    width: 200px;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  .btn-div > input {
+    height: 30px;
+    width: 100px;
+  }
+
+  /* footer */
+
+  .ifour-footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
