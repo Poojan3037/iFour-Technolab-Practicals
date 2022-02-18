@@ -1,0 +1,241 @@
+
+1.Write query to get all employee detail from "Employee" table.
+
+Ans:- SELECT * FROM employee;
+
+
+
+2.Write query to get only "Firstname" column from "Employee" table.
+
+Ans:- SELECT firstname FROM employee; 
+
+
+
+3.Write query to get Firstname in upper case as "First Name" from "Employee" table.
+
+Ans:- SELECT UPPER(FirstName) AS UppercaseFirstName FROM employee;
+
+
+
+4.Write query for combine FirstName and LastName and display it as "Name" (also include white space between first name & last name).
+
+Ans:- SELECT CONCAT(FirstName, ' ', LastName) AS Name FROM employee;
+
+
+
+5.Get all employee detail from Employee table whose "FirstName"  start with latter 'a'.
+
+Ans:- SELECT * from employee where FirstName Like "a%";
+
+
+
+6.Get all employee details from Employee table whose "FirstName"   contains 's'.
+
+Ans:- SELECT * from employee where FirstName Like "%s%";
+
+
+
+7.Get all employee details from Employee table whose "FirstName" end with 't'.
+
+Ans:- SELECT * from employee where FirstName Like "%t";
+
+
+
+8.Get all employee detail from Employee table whose "FirstName" start with any single character between 'a-p'.
+
+Ans:- SELECT * from employee where FirstName Like "[a-p]%";
+
+
+
+9.Get all employee detail from Employee table whose "FirstName"  not start with any single character between 'a-p'.
+
+Ans:- SELECT * from employee where FirstName Like "[^a-p]%";
+
+
+
+10.Get all unique "Department" from Employee table.
+
+Ans:- SELECT DISTINCT Department from employee;
+
+        
+
+11.Show "LeaveStartDate" in "dd mm yyyy" format, ex- "15 Feb 2013"  From EmployeeLeave.
+
+Ans:- SELECT FORMAT(getDate(),'dd/mm/yyyy') as LeaveStartDate from EmployeeLeave;
+
+
+
+12.Show "LeaveEndDate" in "yyyy/mm/dd" format, ex- "2013/02/15"  From EmployeeLeave.
+
+Ans:- SELECT FORMAT(getDate(),'yyyy/mm/dd') as LeaveEndDate from EmployeeLeave;
+
+
+
+13.Get only Year part of "LeaveStartDate".
+
+Ans:- SELECT YEAR(LeaveStartDate) FROM employee;
+
+
+
+14.Get only Month part of "LeaveStartDate".
+
+Ans:- SELECT Month(LeaveStartDate) FROM employee;
+
+
+        
+15.Get the first name, current date, LeaveEndDate and diff between current date and  LeaveEndDate
+        in days.
+Ans : select FirstName, GETDATE() [Current Date], LeaveEndDate , DATEDIFF(DD,LeaveEndDate,GETDATE()) AS (Total Months) FROM EmployeeLeave
+
+
+
+16.Get Employee from Employee who has not applied for any leave.
+
+Ans:- SELECT * from Employee WHERE leave<0;
+
+
+
+17.Get Employee from Employee who has applied more than once for leave.
+
+Ans:- SELECT * from Employee WHERE leave>0;
+
+
+
+18.Get Employee from Employee whose leave status are pending.
+
+Ans:- SELECT * from Employee WHERE leave_status="pending";
+
+
+
+19.Get Employee from Employee whose leave status is pending as well as applied for leave more than once.
+
+Ans:- SELECT * from Employee WHERE leave_status="pending" AND leave>0;
+
+
+
+20.Get Employee who are currently inactive.
+
+Ans:- SELECT * from employee WHERE status="inactive";
+
+
+
+21.Get Employee who are on leave on 25th january.
+
+Ans:- SELECT * from employee WHERE leave_date="25th January";
+
+
+
+22.Get how many employee exist in "Employee" table.
+
+Ans:- SELECT COUNT(id) as total_employee from employee;
+
+
+
+23.Select first record from "Employee" table order by firstname.
+
+Ans:- SELECT * from employee ORDERE BY firstName ASC LIMIT 1;
+
+
+
+24.Select all employee detail with First name not "Ashlesha" and "Bharti"
+
+Ans:- SELECT * from employee WHERE firstName <> "Ashlesha" AND firstName <> "Bharti";
+
+
+
+25.Select first name from "Employee" table concate with prefix "Hello " for Eg: "Hello Bharti"
+
+Ans:- SELECT CONCAT("Hello", firstName) as PrefixFirstName from Firstname;
+
+
+
+26.Calculate postion of 'a' from firstname of employeedetails table.
+
+Ans:- SELECT POSITION("a" IN firstName) as Postion FROM employeedetails;
+
+
+
+27.calculate length of firstname
+
+Ans: SELECT LENGTH(firstName) as Length from employee;
+
+
+
+28.Get Employee details where assigned projects are closed.
+
+Ans:- SELECT * from Employee WHERE assigned_projects="closed";
+
+
+
+29.Get Employee details where assigned projects are not closed.
+
+Ans:- SELECT * from Employee WHERE assigned_projects<>"closed";
+
+
+
+30.Get Employee details where employees are inactive and assigned project is not closed.
+
+Ans:- SELECT * from employee WHERE status="inactive" AND assigned_projects<>"closed";  
+
+
+
+31.Get Employee details where employees are inactive and assigned project is closed.
+
+Ans:- SELECT * from employee WHERE status="inactive" AND assigned_projects="closed"; 
+
+
+
+32.Get employee details who are on leave between project assigned date and Completion date.
+
+Ans:- SELECT * from employee WHERE leave BETWEEN assigned_date AND completion_date;
+
+
+
+33.Get employee details whose project are completed and active and have no pending project.
+
+Ans:-SELECT * from employee WHERE status="active" AND pending="no" AND project="completed";
+
+
+
+34.write down the query to fetch employee name who as assigned more than one project.
+
+Ans:- SELECT * from employee WHERE 
+
+
+
+35.Get employee details for all employee if project is not assigned then display "-No Project Assigned".
+
+
+
+
+36.Get Employee details where employee are on leave after project completion date.
+
+Ans:- SELECT * FROM employee WHERE project_status="done" AND (SELECT * FROM EmployeeLeave  WHERE leaveDate>2022-02-16)
+
+
+
+37.Get List of employee with project id and if project is completed then show Completed else pending as Status column.
+
+
+                
+38.Get count of employee inactive department wise.
+
+Ans:- SELECT COUNT(employeeId) as totalCount FROM employee WHERE status="inactive" GROUP BY department;
+
+
+
+39.Create cluster index for employee table for EmployeeID cloumn. -- Due to keys, there already may be indexes present, but atleast write the query
+
+Ans:- CREATE CLUSTERED INDEX index1 ON employeeTable (EmployeeID);
+
+
+
+40.Create cluster index for employee table for LeaveStatus cloumn.
+
+Ans:- CREATE CLUSTERED INDEX index1 ON employeeTable (LeaveStatus);
+
+
+
+41.Create non cluster index for ProjectManagement table for cloumn  ProjectManagementID and AssignedPersonID.
+
+Ans:- CREATE NONCLUSTERED INDEX both ON ProjectManagement (ProjectManagementID) AND ProjectManagement  (AssignedPersonID); 

@@ -42,7 +42,7 @@ CREATE TABLE poojan_employee
 INSERT INTO poojan_employee  values('101','Poojan','Patel','Vadodara','987654321','Male','04','poojan@gmail','C-304,Rudhraksh Flats,Vadoadara','22','poojan@3037','poojan123','poojan123');
 INSERT INTO poojan_employee  values('102','Smit','Patel','Mehasana','987651234','Male','03','smit@gmail','A-Shiv Society,Mehsana','24','smit@3037','smit123','smit123');
 INSERT INTO poojan_employee  values('103','Kevin','Vasoya','Rajkot','974651234','Male','02','kevin@gmail','S-Om Society,Mehsana','19','kevin@3037','kevin123','kevin123');
-INSERT INTO poojan_employee  values('104','Neha','Chawda','Vadodara','987441234','Female','05','neha@gmail','A-Neha Society,Mehsana','32','neha@3037','neha123','neha123');\
+INSERT INTO poojan_employee  values('104','Neha','Chawda','Vadodara','987441234','Female','05','neha@gmail','A-Neha Society,Mehsana','32','neha@3037','neha123','neha123');
 INSERT INTO poojan_employee  values('105','Meera','Shah','Mumbai','987651233','Female','04','meera@gmail','A-meera Society,Mumbai','24','meera@3037','meera123','meera123');
 
 --Shoe Employee Table Data
@@ -68,6 +68,8 @@ INSERT INTO poojan_exam VALUES ('1002','102','tester dev','Exam for tester devel
 INSERT INTO poojan_exam VALUES ('1003','101','frontend dev.','Exam for frontend developer','85','2022-06-23');
 INSERT INTO poojan_exam VALUES ('1004','104','senior dev.','Exam for senior developer','67','2022-02-11');
 INSERT INTO poojan_exam VALUES ('1005','103','backend dev.','Exam for backend developer','84','2022-07-24');
+INSERT INTO poojan_exam VALUES ('1006','102','backend dev.','Exam for backend developer','44','2022-06-04');
+INSERT INTO poojan_exam VALUES ('1007','101','backend dev.','Exam for backend developer','78','2022-02-12');
 
 --show exam table data
 SELECT * FROM poojan_exam;
@@ -101,3 +103,5 @@ DROP TABLE poojan_exam;
 
 --Add new coloumn
 ALTER TABLE poojan_employee ADD Birthday DATE;
+
+
